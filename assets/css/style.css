@@ -40,7 +40,7 @@ html {
 
 body {
     width: 100%;
-    height: 380vh;
+    height: 488vh;
     font-family: var(--body-font);
     overflow: hidden;
     background: var(--background-color)
@@ -51,6 +51,7 @@ body {
 nav {
     width: 100%;
     height: 11vh;
+    z-index: 1000;
     position: fixed;
     background: var(--gcolor1);
     box-shadow: var(--text-color) 0px 0px 10px;
@@ -330,6 +331,11 @@ section {
     .content{
         width: 100%;
     }
+    .main-container .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .social-links{
         display: flex;
         flex-direction: row;
@@ -346,10 +352,70 @@ section {
     }
 }
 
+/* About section */
+
+.about-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 9rem;
+    padding-top: 9rem;
+    padding-right: 10rem;
+    padding-left: 8rem;
+    font-family: var(--body-font);
+}
+
+.about-section img {
+    width: 340px;
+    border:  var(--color2) 3.5px solid;
+    border-radius: 2.5rem;
+}
+
+.content-about .contact-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-about {
+    font-size: var(--h3-font-size);
+    margin-bottom: 40px;
+}
+
+.contact-btn {
+    width: 130px;
+    height: 40px;
+    background: var(--gcolor1);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+    transition: 0.3s linear;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-btn a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: var(--small-font-size);
+}
+
+.contact-btn:hover {
+    background: var(--gcolor2);
+    scale: 1.1;
+    cursor: pointer;
+}
+
  /* Skill section */
 
 .skills-section {
-    padding-top: 9rem;
+    padding-top: 11rem;
 }
 
 .cards {
@@ -410,7 +476,8 @@ section {
 /* testimoni */
 
 .testi-section {
-    padding-top: 9rem;
+    padding-top:7rem;
+    margin-bottom: 5rem;
 }
 .testimoni-container {
     width: 80%;
@@ -422,6 +489,17 @@ section {
     flex-wrap: wrap;
     margin: auto;
     padding: 20px 0px;
+}
+.testimoni-container2 {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 2px 0px;
 }
 .testimoni-card {
     background: var(--white-color);
@@ -521,7 +599,7 @@ section {
         }
         
         button {
-            background: #4e6ef2;
+            background: var(--gcolor1);
             color: white;
             border: none;
             padding: 12px 25px;
@@ -533,7 +611,7 @@ section {
         }
         
         button:hover {
-            background: #3a5cd8;
+            background: var(--gcolor2);
         }
         
         @media (max-width: 768px) {
@@ -549,11 +627,20 @@ section {
 /* footer */
 footer {
     text-align: center;
-    padding: 30px 0px;
-    background-color: #a9a9a9;
+    padding: 0px 0px;
+    background-color: #747474;
     color: var(--white-color);
     box-shadow: var(--text-color) 0px 0px px;
     position: relative;
     bottom: 0;
     width: 100%;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    margin: 20px 0px;
 }
