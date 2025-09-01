@@ -311,6 +311,10 @@ section {
 @media screen and (max-width: 768px) {
     body{
         overflow-y: visible;
+        height: auto;
+    }
+    nav{
+        height: 7vh;
     }
     .logo{
         position: absolute;
@@ -330,6 +334,7 @@ section {
     }
     .content{
         width: 100%;
+        padding-top: 3rem;
     }
     .main-container .image{
         display: flex;
@@ -349,6 +354,16 @@ section {
     .main-container .image{
         width: 40%;
         margin: 0px;
+    }
+    .main-container .btn button{
+        width: 80%;
+        height: 7vh;
+        margin: 20px 0px;
+    }
+}
+@media screen and (max-width: 425px) {
+    nav {
+        height: 11vh;
     }
 }
 
@@ -412,6 +427,49 @@ section {
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    .about-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 15rem;
+        gap: 3rem;
+    }
+    .about-section img {
+        display: none;
+        width: 9rem;
+        margin: auto;
+    }
+    .content-about {
+        text-align: center;
+    }
+    .btns {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .about-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top:35rem;
+        gap: 3rem;
+    }
+    .about-section img {
+        display: none;
+        width: 9rem;
+        margin: auto;
+    }
+    .content-about {
+        text-align: center;
+    }
+    .btns {
+        justify-content: center;
+    }
+}
+
  /* Skill section */
 
 .skills-section {
@@ -465,7 +523,7 @@ section {
 
 @media screen and (max-width: 768px) {
     .skills-section {
-        padding-top: 20rem;
+        padding-top: 5rem;
     }
     body  {
        display: flex;
@@ -524,6 +582,28 @@ section {
 }  
 .testimoni-card:hover {
     transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    body  {
+       display: flex;
+       flex-direction: column;
+    }
+    .testimoni-container2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .testi-section {
+        padding-top: 40rem;
+    }
+    body  {
+       display: flex;
+       flex-direction: column;
+    }
+    .testimoni-container2 {
+        display: none;
+    }
 }
 
 /* kontak */
@@ -615,6 +695,21 @@ section {
         }
         
         @media (max-width: 768px) {
+            .container {
+                padding-top: rem;
+            }
+            .contact-section {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                padding: 30px;
+            }
+        }
+        @media (max-width: 425px) {
+            .container {
+                padding-top: 50rem;
+            }
             .contact-section {
                 flex-direction: column;
             }
@@ -643,4 +738,10 @@ footer {
 
 .social-link {
     margin: 20px 0px;
+}
+
+.social-link a {
+    color: var(--white-color);
+    margin: 0px 15px;
+    transition: 0.3s linear;
 }
