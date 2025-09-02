@@ -314,7 +314,7 @@ section {
         height: auto;
     }
     nav{
-        height: 7vh;
+        height: 11vh;
     }
     .logo{
         position: absolute;
@@ -365,6 +365,10 @@ section {
     nav {
         height: 11vh;
     }
+    .main-container img {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 /* About section */
@@ -378,15 +382,26 @@ section {
     flex-direction: row-reverse;
     gap: 9rem;
     padding-top: 9rem;
-    padding-right: 10rem;
+    padding-right: 20rem;
     padding-left: 8rem;
     font-family: var(--body-font);
 }
 
 .about-section img {
     width: 340px;
-    border:  var(--color2) 3.5px solid;
+    border: var(--color1) 3.5px solid;
     border-radius: 2.5rem;
+}
+
+.about-section .imaged {
+    display: inline;
+    width: 9rem;
+    margin: auto;
+}
+
+.about-section .pot  {
+    display: none;
+    margin-bottom: 2rem;
 }
 
 .content-about .contact-btn {
@@ -433,13 +448,18 @@ section {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 15rem;
+        padding-top: 25rem;
+        padding-right: 8rem;
         gap: 3rem;
     }
-    .about-section img {
+    .about-section .imaged {
         display: none;
         width: 9rem;
         margin: auto;
+    }
+    .about-section .pot  {
+        display: inline;
+        margin-bottom: 2rem;
     }
     .content-about {
         text-align: center;
@@ -522,9 +542,6 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-    .skills-section {
-        padding-top: 5rem;
-    }
     body  {
        display: flex;
        flex-direction: column;
@@ -588,6 +605,9 @@ section {
     body  {
        display: flex;
        flex-direction: column;
+    }
+    .testi-section {
+        padding-top: 39rem;
     }
     .testimoni-container2 {
         display: none;
@@ -696,7 +716,7 @@ section {
         
         @media (max-width: 768px) {
             .container {
-                padding-top: rem;
+                padding-top: 40rem;
             }
             .contact-section {
                 flex-direction: column;
