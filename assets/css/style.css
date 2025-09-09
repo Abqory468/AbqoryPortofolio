@@ -40,7 +40,7 @@ html {
 
 body {
     width: 100%;
-    height: 488vh;
+    height: auto;
     font-family: var(--body-font);
     overflow: hidden;
     background: var(--background-color)
@@ -176,7 +176,7 @@ nav {
 }
 
 .dropdown .hamburger-links a:hover {
-    background-color: var(--background-color);
+    background-color: rgb(187, 187, 187);
 }
 
 /* hero section */
@@ -221,8 +221,13 @@ section {
     padding: 0px 20px;
 }
 
-.content h1 span {
-    color: var(--color2); /*span h1*/
+.gradient-text {
+    background: var(--gcolor1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For Firefox */
+    color: transparent;
+    display: inline-block;
 }
 
 .typewriter {
@@ -443,12 +448,14 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
     .about-section {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 25rem;
         padding-right: 8rem;
         gap: 3rem;
     }
@@ -459,7 +466,9 @@ section {
     }
     .about-section .pot  {
         display: inline;
-        margin-bottom: 2rem;
+        width: 13rem;
+        border-width: 1px;
+        margin-bottom: 1rem;
     }
     .content-about {
         text-align: center;
@@ -474,7 +483,7 @@ section {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top:35rem;
+        margin-top:25rem;
         gap: 3rem;
     }
     .about-section img {
@@ -601,13 +610,14 @@ section {
     transform: translateY(-10px);
 }
 
+.text {
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     body  {
        display: flex;
        flex-direction: column;
-    }
-    .testi-section {
-        padding-top: 39rem;
     }
     .testimoni-container2 {
         display: none;
@@ -615,7 +625,7 @@ section {
 }
 @media screen and (max-width: 425px) {
     .testi-section {
-        padding-top: 40rem;
+        margin-top: 50rem;
     }
     body  {
        display: flex;
@@ -632,12 +642,12 @@ section {
             max-width: 10000px;
         }
         
-        .contact-section {
-            display: flex;
-            background: white;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
+.contact-section {
+    display: flex;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
         
         .contact-info {
             flex: 1;
@@ -716,7 +726,7 @@ section {
         
         @media (max-width: 768px) {
             .container {
-                padding-top: 40rem;
+                padding-top: 5rem;
             }
             .contact-section {
                 flex-direction: column;
@@ -728,7 +738,7 @@ section {
         }
         @media (max-width: 425px) {
             .container {
-                padding-top: 50rem;
+                margin-top: 25rem;
             }
             .contact-section {
                 flex-direction: column;
@@ -743,17 +753,30 @@ section {
 footer {
     text-align: center;
     padding: 0px 0px;
-    background-color: #747474;
+    background: linear-gradient(1deg, #b1b1b1 55%, #d9d8d8, #ffffff);
     color: var(--white-color);
     box-shadow: var(--text-color) 0px 0px px;
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 35vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.foot img{
+    width: 45px;
+    border-radius: 50%;
+}
+
+.foot {
+    margin-bottom: 0.5rem;
+}
+
+.foo {
+    margin-top: 0.5rem;
 }
 
 .social-link {
@@ -764,4 +787,9 @@ footer {
     color: var(--white-color);
     margin: 0px 15px;
     transition: 0.3s linear;
+}
+
+hr {
+    color: #000000;
+    width: 250px;
 }
